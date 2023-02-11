@@ -8,17 +8,23 @@
 
         <!-- Entity classes -->
         <class>main.person</class>
+        <class>main.Car</class>
+        <class>main.Bus</class>
+        <class>main.Lorry</class>
+        <class>main.Department</class>
+        <class>main.Employee</class>
 
         <properties>
             <!-- The JDBC URL to the database instance -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost:3306/test?useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+                      value="jdbc:mysql://localhost:3306/test"/>
 
             <!-- The database username -->
             <property name="jakarta.persistence.jdbc.user" value="root"/>
 
             <!-- The database password -->
             <property name="jakarta.persistence.jdbc.password" value="#0Security"/>
+          <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

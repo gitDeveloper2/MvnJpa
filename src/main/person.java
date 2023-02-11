@@ -1,9 +1,10 @@
 package main;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 
 @Entity
-
+@NamedQuery(query = "select p from person p where p.id=:id",name = "find by id")
 public class person {
     @Id
     private int id;
